@@ -31,5 +31,28 @@ Min and Max return the minimum and maximum of their arguments
 
 abs returns the abolute value of an argument
 
-int() and float() can convert their arguments to the corresponding type:
+int() and float() can convert their arguments to the corresponding type
 
+#Functions
+common pitfall: when you're looking up a funciton, remember to pass in the name of the function itself, and the result of calling that funciton
+
+Defining functions
+def least_difference(a,b,c):
+
+create a function called least-difference, which take three arguments, a,b,c
+
+Functions start with a header introduced by the def key work, the indented block of code following the : is run when the funciton is called
+
+return is another keyword, it exits the funciton immediately, and passes the value on the right hand side to calling context
+
+Docstring:
+""" Return the samlles tandlkgajsgjaslgjasdld
+
+adsgjlkasdgjsadgjlk;asd
+
+"""
+
+No return statement return None in the end
+
+Default arguments
+print(1,2,3, sep = '<') 1<2<3

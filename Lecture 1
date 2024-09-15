@@ -1,0 +1,95 @@
+Roadmap for ML
+Understand problem -> Data collection -> Data Visualization -> Data preparation -> Model selection -> Model Training -> Test and Assess -> Deploy
+
+//Type of Machine learning
+
+Supervised / Unsupervised Learning:
+Machine learning systems can be classfified according to the amount and type of supervision they get during training
+Supervised: k-Nearest Neighbours, Linear Regression, Logistic Regression, Decision Trees, Neural Networks, and many more
+Unsupervised: k-Means, Principal component analysis
+Semi-Supervised
+Reinforcement Learning
+
+Instance-Based/ Model-Based Learning
+Instance-Based: system elawrns the examples by heard, then generalizes to new cases by using a similarity/ distance measure to compare them to the learned examples
+
+Model-Based: Build a model of these examples and then use that model to make predictions
+
+Understanding Data and how to work with it is very importance for machine learning
+
+//Data Science is multidisciplinary and all-encompassing field.
+Includes: 
+Data mining
+mahcine learning
+big data
+databases
+
+//nearest neighbours classifier
+output is a class
+
+Instance-based learning, or lazy learning: computation only happends once called
+
+Flexible approach- no assumptions on data distribution
+
+//k-nearest neighbour classification
+works on multidimensional data
+For visualization purposes we will use a 2-dimensional example
++ represents unknown test samples that we want to classify
+
+Simple algorithm
+we are making the assumption that similar samples will be located close together
+Simple algorithm
+
+calculate distance         obtain the nearest neighbour           Determine labels
+
+Algorithm
+For a sinle neaerest neighbour
+Find example (X*, t*) from the stored training set cloest to x/
+That is 
+       x* = argmin(x(i) belongs to train.set) distance (x(i), x)
+
+output y = t*
+
+How do we measure distance
+p =1 Manhattan or p = 2 Eculidean
+
+Decision Boundary
+Can generate arbitrary test points on the plane and apply kNN
+
+The boundary between regions of input space assigned to different categories
+
+Voronoi Diagrams (k=1)
+
+Tradeoffs in choosing k
+Small k: Good at capturing fine-grained patterns
+         May overfit, i.e. be sensitive to random noise
+             Excellent for training data, not that good for new data, tooo complex
+
+large k
+   Makes stable prediciotns by averagin over lots of examples
+   May underfit, i.e. fail to capture important regularities
+       Not that good for training data, not good for new data, too simple
+
+What is the best k
+Select the k based on the best performance on the validation set, report the results on the test set
+Generally, the performance on the validaiton set will be better than on the test set
+
+Normalization
+Nearest Neighbours can be sensitive to the reanges of different features
+ofthe, the units are arbitrary
+Simple fix: normalize each dimension to be zero mean and unit variance (compute the mean and standard deviaiton and take xj' = (xj - mean) / deviation)
+
+Caution: depending on the problem, the scale might be important
+
+function
+sklearn.neighbors, KNeighborsClassifier
+
+Methods
+fit(X,y)
+predict(X)
+
+
+
+
+
+

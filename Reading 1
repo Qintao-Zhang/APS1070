@@ -75,3 +75,27 @@ Boolean conversion
 all numbers are treated as true, except 0
 all string are treated as true, except the empty string
 
+#Lists
+Lists in python represent ordered sequences of values. can be string or integer or lists or mix
+
+Indexing
+Python uses zero-based indexing, so the first element has index 0
+
+Elements at the end of the list can be accessed with negative numbers, starting from -1
+
+Slicing
+planets[0:3] starting from index 0 and continuing up to but not including index 3
+
+changing lists:
+Lists are mutable, meaning they can be modfied in place
+one way to modify a list is to assign to an index or slice expression
+
+List functions
+len gives the length of a list
+sorted returns a sorted version of a list
+sum does what you might expect
+min and max to get the minimum or maximum of several arguments.
+
+
+
+

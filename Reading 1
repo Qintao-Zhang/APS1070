@@ -56,3 +56,22 @@ No return statement return None in the end
 
 Default arguments
 print(1,2,3, sep = '<') 1<2<3
+
+#Booleans
+bool has two possible values: True and False
+
+COmparision Operations 
+a == b 
+a != b
+a < b
+a > b
+a <= b
+a >= b
+
+Conditionals statement
+if elif and else
+
+Boolean conversion
+all numbers are treated as true, except 0
+all string are treated as true, except the empty string
+

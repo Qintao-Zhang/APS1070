@@ -1,0 +1,149 @@
+Algorithm complexity
+
+Algorithm: An algorithm is a sequence of clearly stated rules that specify a step by step method for solving a given problem.
+算法是一系列明确规定的规则，指定解决给定问题的逐步方法
+The rules should be unambiguous and sufficiently detailed that they can be carried out without creativity.
+规则应该明确且足够详细，以便无需创造性即可执行
+Algorithms predate electronic computers by thousands by years 
+算法比电子计算机早数千年
+A program is a sequence of computer instructions implementing the algorithm
+程序是实现算法的计算机指令序列
+
+Experience shows that optimizing the algorithm can provide greater gains than by optimizing other factors such as:
+processor, language, complier, human programmer
+经验表明，优化算法可以比优化其他因素带来更大的收益，例如处理器，语言，编译器，人类程序员
+The analysis process often results in us discovering simpler algorithms
+分析过程通常会让我们发现更简单的算法
+Many algorithms have parameters that must be set before implementation. Analysis allows us to set the optimal values
+许多算法都有在实现之前必须设置的参数。分析师我们能够设置最佳值
+
+There are many contributors to computational complexity:
+Hardware： processor, memory, cache
+OS, version of Python, libraries, drivers
+Programs running in the background'
+implementation dependent
+choice of input
+which input to test
+
+When we're considering algorithm computational complexity, we're interested with whathappens as the size of the input to the algorithm grows:
+Time, Space  时间，空间
+
+Evaluating an implementation: Use empirical timing
+Evaluating an algorithm:  Use asymptotic analysis
+
+Basic elementary operations take constant time: Arithmetic, Assignment, Access one array index, Comparing two simple values
+
+Other operations are summations or products: Consecutive statements are summed, Loops are cost of loop body x number of loops
+
+The total running time T of algorithm A on the input is the number of elementary operations used when input is fed into A
+算法A在输入上的总运行时间T是输入到A时使用的初等运算的数量
+
+Running time
+Function              Notation      10         1000       
+Constant                1             
+Logarithmic           logn
+Linear                  n
+Linearithmic          nlogn
+Quadratic              n^2
+Cubic                  n^3
+Exponential            2^n
+
+Big-Oh Notation Formally
+Given two function for input n, we ay fn is in o(g(n)) iff there exist positive constants c and n0
+
+Eventually g(n) is always an upper bound on f(n) ignoring constants 最终g(n)始终是f(n)的上限，忽略常数
+
+From Fastest to Slowest
+constant 
+logarithmic
+linear
+linearithmic
+quadratic
+cubic
+polynomial
+exponential
+
+Worst-Case analysis
+In general, we are interested in three types of performance: Best-case / Fastest/ Average-case/ Worest-case
+
+When determing worst-case, we tend to be pessimistic
+  if there is conditional, count the branch that will run the slowest
+  如果有条件，统计运行最慢的分支
+  This will give a loose bound on how slow the algorithm may run
+
+Pros and Cons of Worst and Average Analysis
+Worst-case bounds are valid for all instances: this is important for mission-critical applications
+Worst-case bounds are  often easier to derive mathematically
+Worst-case bounds often hugely exceed typical running time and have little predictive opr comparative value.
+Average-case running time is often more realistic. Quicksort is a classic example.
+Average-case analysis requires a good understanding of the probability distribution of the inputs
+Average-case analysis is often more practically useful, provided the algorithm will be run on random data
+
+Analysis of Sorting Algorithms
+
+Searching a sorted list
+
+Logarithmic O(logn): repeatedly split search space in half 
+
+Naive sorting
+Complexity is O(n^2)
+
+Merging sorted lists
+Linear O(n): just maintain indices of next element in each list
+
+Merge Sort
+complexity O(n log n) n operations at each level, log n  levels
+
+Dictionary Abstract Data Type
+Dicitonary
+An abstract data type that supports operations to insert, find, and delete and element with given search key.
+Used for databses, other names are table abstract data type and associative array
+There are many ways in which this could be implemented: unsorted list; sorted listl binary search tree; hash table
+
+Unsorted list
+Inserting an element is constant time o(1)
+The only way to find an element is to check each element
+This takes time in O(n) for any reasonable implementation
+Also, deletion is O(n) because first we should find it and then other elements must be pushed to the left
+
+Sorted List
+In a sorted list, inserting an element is harder because you ahve to find the right place and therefore it is O(n)
+Ina sorted list, finding an element is easier because the order allows us to eprform a binary search which is O(logn)
+Again, deletion is O(n) because other elements must be pushed to the left
+
+Efficiency of various implementations
+                             insert            delete            find
+Unsorted                       1                  n               n
+sorted                         n                  n              logn
+binary search tree            logn                logn           logn
+
+Hash Functions and Tables
+Order irrelevant, aim for constant-time find, insert and delete
+  On average under some often-reasonable assumptions
+A hash table is an array fo some fixed size
+  maps keys -> indices when contain values
+
+An ideal hash function:
+fast to compute
+Design so that two keys arely hash to the same index
+    must happen if elements stored exceeds table size
+    can lead to collisions, more on this later
+
+Collision Resolution
+Collision: When two keys map to the same location in the hash table
+
+We try to avoid it, but cannot if number of keys exceeds table size
+
+So hash tables should support collision resoltuion
+
+Collision Resolution via Open Addressing
+Uses no extra space- every element is stored in the hash table
+
+If a key k hashes to a value h(k) that is already occupied, we probe
+  The most common probing methods is linear probing.
+
+Open Addressing: Double Hashing
+
+
+
+
